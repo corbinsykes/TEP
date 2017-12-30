@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", function(){
+    preloadImage('./chloe.jpg')
+    preloadImage('./tamarcus.jpg')
+    preloadImage('./mason.jpg')
+
     var slide = 1;
     var total = 3;
 
@@ -29,5 +33,10 @@ document.addEventListener("DOMContentLoaded", function(){
             slide = 1;
             splash.classList.replace('slide' + total, 'slide' + slide);
         }
+    }
+
+    function preloadImage(url) {
+        var img = new Image();
+        img.src = url;
     }
 });
